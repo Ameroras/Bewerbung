@@ -286,7 +286,7 @@ body.darkmode footer {
 .profile-header-container {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
 }
 
 .ihk-badge {
