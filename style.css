@@ -242,7 +242,7 @@ body.darkmode footer {
 
 #contact form textarea {
     resize: none;
-}
+    height: 200px;
 
 #contact form input::placeholder,
 #contact form textarea::placeholder {
@@ -266,21 +266,17 @@ body.darkmode footer {
 .social-media {
     text-align: center;
 }
-
 .social-media h2 {
     margin-bottom: 10px;
 }
-
 .social-media a {
     display: inline-block;
     margin: 0 10px;
     transition: transform 0.3s;
 }
-
 .social-media a:hover {
     transform: scale(1.2);
 }
-
 .social-media img {
     width: 40px;
     height: 40px;
@@ -301,4 +297,3 @@ body.darkmode footer {
         display: block;
     }
 }
-
