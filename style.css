@@ -197,24 +197,33 @@ body.darkmode footer {
 }
 
 /* Kontaktformular */
+/* Kontaktformular */
 #contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     background-color: #2e2e2e;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     max-width: 600px;
     margin: 0 auto 40px auto;
+    box-sizing: border-box;
 }
 
 #contact form input,
 #contact form textarea {
     width: 100%;
     padding: 12px;
-    margin-bottom: 12px;
     border: none;
     border-radius: 5px;
     background-color: #444;
     color: #fff;
+    box-sizing: border-box; /* wichtig für saubere Darstellung */
+}
+
+#contact form textarea {
+    resize: none; /* verhindert das Vergrößern/Verkleinern */
 }
 
 #contact form input::placeholder,
@@ -234,9 +243,6 @@ body.darkmode footer {
     transition: background-color 0.3s;
 }
 
-#contact form button:hover {
-    background-color: #f0ad4e;
-}
 
 /* Social Media Icons */
 .social-media {
