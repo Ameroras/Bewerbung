@@ -1,409 +1,329 @@
-
 <!DOCTYPE html>
+<!-- Dokumenttyp HTML5 -->
 <html lang="de">
+<!-- Sprache auf Deutsch gesetzt -->
 <head>
     <meta charset="UTF-8">
+    <!-- Zeichencodierung auf UTF-8 für deutsche Umlaute -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsives Design für verschiedene Bildschirmgrößen -->
     <title>Lebenslauf Dorian Ratzmer</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-        color: #333;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    header, nav, section, footer {
-        padding: 20px;
-        max-width: 1000px;
-        margin: auto;
-        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    }
-    nav {
-        background: #444;
-        color: #fff;
-        text-align: center;
-        padding: 12px 0;
-        margin-bottom: 20px;
-        border-bottom: 3px solid #f0ad4e;
-    }
-    nav a {
-        color: #fff;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s;
-    }
-    nav a:hover {
-        color: #f0ad4e;
-    }
-    h1, h2, h3 {
-        text-align: center;
-    }
-    img.profile-pic {
-        width: 200px;
-        border-radius: 50%;
-        margin: 15px auto;
-        display: block;
-        border: 3px solid #f0ad4e;
-        transition: border-color 0.3s;
-    }
-    .skills {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 10px;
-    }
-    .skill {
-        background: #f0ad4e;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 20px;
-        font-weight: bold;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
-    }
-    .skill:hover {
-        transform: scale(1.05);
-    }
-    .project-gallery {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-        margin: 15px 0;
-    }
-    .project-gallery img {
-        width: 450px;
-        max-width: 50%;
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        transition: transform 0.3s, border-color 0.3s;
-    }
-    .project-gallery img:hover {
-        transform: scale(1.5);
-        border-color: #f0ad4e;
-    }
-    .single-project-img {
-        max-width: 800px;
-        width: 100%;
-        display: block;
-        margin: 15px auto;
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        transition: border-color 0.3s;
-    }
-    footer {
-        text-align: center;
-        font-size: 0.9em;
-        color: #555;
-        margin-top: 30px;
-        padding: 15px 0;
-        border-top: 1px solid #ccc;
-        transition: color 0.3s, border-color 0.3s;
-    }
-    section {
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        margin-bottom: 20px;
-        transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-    }
+    <style>
+        /* Grundlegende Formatierung des gesamten Body */
+        body {
+            font-family: Arial, sans-serif; /* Schriftart */
+            background-color: #f9f9f9; /* Heller Hintergrund */
+            color: #333; /* Dunkelgraue Schrift */
+            margin: 0; /* Kein Außenabstand */
+            padding: 0; /* Kein Innenabstand */
+            line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+            transition: background-color 0.3s, color 0.3s; /* Sanfter Übergang bei Farbwechsel */
+        }
 
-    /* Darkmode Styles */
-    body.darkmode {
-        background-color: #121212;
-        color: #eee;
-    }
-    body.darkmode header,
-    body.darkmode nav,
-    body.darkmode section,
-    body.darkmode footer {
-        background-color: #1e1e1e;
-        color: #eee;
-        box-shadow: none;
-    }
-    body.darkmode nav {
-        background-color: #333;
-        border-bottom-color: #f0ad4e;
-    }
-    body.darkmode nav a {
-        color: #ddd;
-    }
-    body.darkmode nav a:hover {
-        color: #f0ad4e;
-    }
-    body.darkmode img.profile-pic {
-        border-color: #f0ad4e;
-    }
-    body.darkmode .skill {
-        background-color: #f0ad4e;
-        color: #222;
-        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
-    }
-    body.darkmode .project-gallery img,
-    body.darkmode .single-project-img {
-        border-color: #444;
-    }
-    body.darkmode footer {
-        color: #aaa;
-        border-top-color: #444;
-    }
-    .darkmode-button {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        padding: 8px 12px;
-        background-color: #444;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        z-index: 1000;
-        transition: background-color 0.3s, color 0.3s;
-    }
+        /* Standardabstand und maximale Breite für wichtige Bereiche */
+        header, nav, section, footer {
+            padding: 20px;
+            max-width: 1000px; /* Maximalbreite für bessere Lesbarkeit */
+            margin: auto; /* Zentriert auf der Seite */
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Sanfte Übergänge */
+        }
 
-    .darkmode-button:hover {
-    background-color: #f0ad4e;
-    color: #222;
-    }
-    /* Kontaktformular Styling */
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        max-width: 500px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #1e1e1e;  /* leicht heller als Body */
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-    }
+        /* Navigation Bar */
+        nav {
+            background: #444; /* Dunkelgrauer Hintergrund */
+            color: #fff; /* Weiße Schrift */
+            text-align: center; /* Zentrierter Text */
+            padding: 12px 0; /* Vertikaler Innenabstand */
+            margin-bottom: 20px; /* Abstand nach unten */
+            border-bottom: 3px solid #f0ad4e; /* Orangefarbener Rahmen unten */
+        }
 
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-        padding: 10px;
-        font-size: 1em;
-        border: 1px solid #444;
-        border-radius: 4px;
-        width: 100%;
-        box-sizing: border-box;
-        background-color: #333;
-        color: #eee;
-    }
+        /* Links in der Navigation */
+        nav a {
+            color: #fff; /* Weiße Schrift */
+            margin: 0 15px; /* Abstand links und rechts */
+            text-decoration: none; /* Kein Unterstrich */
+            font-weight: bold; /* Fettgedruckt */
+            transition: color 0.3s; /* Farbwechsel sanft */
+        }
 
-    form button[type="submit"] {
-        padding: 10px;
-        font-size: 1em;
-        background-color: #f0ad4e;
-        color: #222;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-    }
+        /* Hover-Effekt für Links in der Navigation */
+        nav a:hover {
+            color: #f0ad4e; /* Orangefarbe beim Überfahren */
+        }
 
-    form button[type="submit"]:hover {
-        background-color: #e6951c;
-        color: #fff;
-    }
-/* Kontaktformular */
-    #contact form {
-        background-color: #2e2e2e;  /* dunkler Hintergrund */
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        max-width: 600px;
-        margin: 0 auto 40px auto; /* zentriert + Abstand unten */
-    }
+        /* Überschriften Zentrieren */
+        h1, h2, h3 {
+            text-align: center;
+        }
 
-    #contact form input,
-    #contact form textarea {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 12px;
-        border: none;
-        border-radius: 5px;
-        background-color: #444;
-        color: #fff;
-    }
+        /* Profilbild Formatierung */
+        img.profile-pic {
+            width: 200px; /* Breite des Bildes */
+            border-radius: 50%; /* Rundes Bild (Kreis) */
+            margin: 15px auto; /* Oben und unten Abstand, zentriert */
+            display: block; /* Blockelement für Zentrierung */
+            border: 3px solid #f0ad4e; /* Oranger Rahmen */
+            transition: border-color 0.3s; /* Sanfter Übergang bei Rahmenfarbe */
+        }
 
-    #contact form input::placeholder,
-    #contact form textarea::placeholder {
-        color: #ccc;
-    }
+        /* Container für Skills als flexibles Layout */
+        .skills {
+            display: flex; /* Flexbox für flexible Anordnung */
+            flex-wrap: wrap; /* Zeilenumbruch bei Platzmangel */
+            justify-content: center; /* Zentriert alle Skills */
+            gap: 10px; /* Abstand zwischen den Skills */
+            margin-top: 10px; /* Abstand nach oben */
+        }
 
-    #contact form button {
-        width: 100%;
-        padding: 12px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        transition: background-color 0.3s;
-    }
+        /* Einzelne Skill-Boxen */
+        .skill {
+            background: #f0ad4e; /* Oranger Hintergrund */
+            color: white; /* Weiße Schrift */
+            padding: 10px 20px; /* Innenabstand */
+            border-radius: 20px; /* Abgerundete Ecken */
+            font-weight: bold; /* Fett */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* leichter Schatten */
+            transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+            /* Sanfte Animationen bei Hover */
+        }
 
-    #contact form button:hover {
-        background-color: #45a049;
-    }
+        /* Hover-Effekt auf Skills: leichtes Vergrößern */
+        .skill:hover {
+            transform: scale(1.05);
+        }
 
-    /* Social Media Icons */
-    .social-media {
-        text-align: center;
-    }
+        /* Galerie für Projektbilder */
+        .project-gallery {
+            display: flex; /* Flexbox */
+            justify-content: center; /* Zentriert */
+            gap: 15px; /* Abstand zwischen Bildern */
+            flex-wrap: wrap; /* Umbruch wenn nötig */
+            margin: 15px 0; /* Abstand oben und unten */
+        }
 
-    .social-media h2 {
-        margin-bottom: 10px;
-    }
+        /* Bilder in der Galerie */
+        .project-gallery img {
+            width: 450px; /* Fixe Breite */
+            max-width: 50%; /* Maximal die Hälfte der Elternbreite */
+            border: 2px solid #ddd; /* Hellgrauer Rahmen */
+            border-radius: 8px; /* Abgerundete Ecken */
+            transition: transform 0.3s, border-color 0.3s; /* Sanfte Übergänge */
+        }
 
-    .social-media a {
-        display: inline-block;
-        margin: 0 10px;
-        transition: transform 0.3s;
-    }
+        /* Hover-Effekt auf Galerie-Bilder: Vergrößern + Rahmenfarbe ändern */
+        .project-gallery img:hover {
+            transform: scale(1.5);
+            border-color: #f0ad4e; /* Orange */
+        }
 
-    .social-media a:hover {
-        transform: scale(1.2);
-    }
+        /* Einzelnes großes Projektbild */
+        .single-project-img {
+            max-width: 800px;
+            width: 100%;
+            display: block; /* Block für Zentrierung */
+            margin: 15px auto; /* Abstand + Zentrierung */
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
 
-    .social-media img {
-        width: 40px;
-        height: 40px;
-        filter: brightness(0) invert(1);  /* damit die Icons im Darkmode weiß sind */
-    }
+        /* Footer Gestaltung */
+        footer {
+            text-align: center;
+            font-size: 0.9em; /* Etwas kleinere Schrift */
+            color: #555; /* Mittelgrau */
+            margin-top: 30px;
+            padding: 15px 0;
+            border-top: 1px solid #ccc; /* Oberer Rahmen */
+            transition: color 0.3s, border-color 0.3s;
+        }
 
-</style>
+        /* Abschnitt Styling */
+        section {
+            background: white; /* Weißer Hintergrund */
+            padding: 20px;
+            border-radius: 8px; /* Abgerundete Ecken */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* leichter Schatten */
+            margin-bottom: 20px;
+            transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+        }
 
+        /* Darkmode Styles */
+        body.darkmode {
+            background-color: #121212; /* Dunkler Hintergrund */
+            color: #eee; /* Helle Schrift */
+        }
+        body.darkmode header,
+        body.darkmode nav,
+        body.darkmode section,
+        body.darkmode footer {
+            background-color: #1e1e1e; /* Dunkle Container */
+            color: #eee; /* Helle Schrift */
+            box-shadow: none; /* Kein Schatten */
+        }
+        body.darkmode nav {
+            background-color: #333; /* Etwas helleres Dunkelgrau */
+            border-bottom-color: #f0ad4e; /* Orange */
+        }
+        body.darkmode nav a {
+            color: #ddd; /* Hellgrau */
+        }
+        body.darkmode nav a:hover {
+            color: #f0ad4e; /* Orange beim Hover */
+        }
+        body.darkmode img.profile-pic {
+            border-color: #f0ad4e; /* Oranger Rahmen */
+        }
+        body.darkmode .skill {
+            background-color: #f0ad4e; /* Orange */
+            color: #222; /* Dunkle Schrift auf Orange */
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* leichter heller Schatten */
+        }
+        body.darkmode .project-gallery img,
+        body.darkmode .single-project-img {
+            border-color: #444; /* Dunkler Rahmen */
+        }
+        body.darkmode footer {
+            color: #aaa; /* Hellgrau */
+            border-top-color: #444; /* Dunkler Rahmen */
+        }
 
+        /* Button für Darkmode Umschaltung */
+        .darkmode-button {
+            position: fixed; /* Immer sichtbar */
+            top: 20px;
+            right: 20px;
+            padding: 8px 12px;
+            background-color: #444; /* Dunkelgrau */
+            color: #fff; /* Weiß */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer; /* Maus zeigt Hand */
+            z-index: 1000; /* Immer oben */
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .darkmode-button:hover {
+            background-color: #f0ad4e;
+            color: #222;
+        }
+
+        /* Styling des Kontaktformulars */
+        form {
+            display: flex; /* Flexbox */
+            flex-direction: column; /* Vertikal anordnen */
+            gap: 15px; /* Abstand zwischen Eingabefeldern */
+            max-width: 500px; /* Maximale Breite */
+            margin: 0 auto; /* Zentrieren */
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #f0ad4e; /* Orange beim Fokus */
+            outline: none; /* Kein Umriss */
+        }
+
+        button[type="submit"] {
+            background-color: #f0ad4e;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: #d99728; /* Etwas dunkleres Orange */
+        }
+
+    </style>
 </head>
 <body>
-    <button id="darkmode-toggle" class="darkmode-button">🌙 Darkmode</button>
+    <button class="darkmode-button" onclick="toggleDarkMode()">🌙 Darkmode</button>
 
-<header>
-    <h1>Dorian Ratzmer</h1>
-    <h3>IHK-zertifizierter Datenanalyst - Power BI, Python, SQL</h3>
-    <img src="images/Dorian_Nordsee.jpg" alt="Dorian Ratzmer" class="profile-pic">
-</header>
+    <header>
+        <h1>Dorian Ratzmer</h1>
+        <h2>Data Engineer & Data Analyst</h2>
+        <img src="profilbild.jpg" alt="Dorian Ratzmer Profilbild" class="profile-pic">
+    </header>
 
-<nav>
-    <a href="#about">Was mich ausmacht</a>
-    <a href="#skills">Fähigkeiten</a>
-    <a href="#projects">Projekte</a>
-    <a href="#contact">Kontakt</a>
-</nav>
+    <nav>
+        <a href="#skills">Skills</a>
+        <a href="#projekte">Projekte</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
 
-<section id="about">
-    <h2>Was mich ausmacht</h2>
-    <p>Aus meiner langjährigen Tätigkeit in der persönlichen Assistenz bringe ich ein hohes Maß an Verantwortungsbewusstsein, Kommunikationsstärke und Organisationstalent mit.
-    In meiner aktuellen Weiterbildung zum Data Analyst habe ich gelernt, diese Fähigkeiten mit analytischem Denken und technischem Know-how zu verbinden.
-    Ich arbeite selbstständig, lerne schnell neue Tools und Methoden kennen und bin motiviert, meine Kenntnisse kontinuierlich auszubauen und im Team einzubringen.
-    Besonders wichtig sind mir dabei eine strukturierte Arbeitsweise und Zuverlässigkeit – Eigenschaften, die ich über viele Jahre in anspruchsvollen, verantwortungsvollen Tätigkeiten verfeinert habe.
-    Meine Erfahrung im Umgang mit Menschen mit besonderen Bedürfnissen hat meine soziale Kompetenz und Empathie gestärkt, die ich heute auch in datengetriebenen Projekten nutze, um komplexe Sachverhalte verständlich aufzubereiten.
-    Zudem bin ich es gewohnt, in stressigen Situationen den Überblick zu behalten und Lösungen zielorientiert umzusetzen.
-    Ich suche eine Position, in der ich meine Fähigkeiten als kommunikativer und analytischer Teamplayer weiterentwickeln kann – idealerweise in einem Umfeld, das Innovation fördert und persönliche Weiterentwicklung unterstützt.</p>
-</section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Datenanalyse</div>
+            <div class="skill">ETL-Prozesse</div>
+            <div class="skill">Data Engineering</div>
+        </div>
+    </section>
 
-<section id="skills">
-    <h2>Mein Skillset</h2>
-    <div class="skills">
-        <div class="skill">Power BI</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Excel</div>
-        <div class="skill">Python</div>
-        <div class="skill">Projektmanagementtools</div>
-        <div class="skill">Teamfähigkeit</div>
-    </div>
+    <section id="projekte">
+        <h2>Projekte</h2>
+        <div class="project-gallery">
+            <img src="projekt1.jpg" alt="Projekt 1">
+            <img src="projekt2.jpg" alt="Projekt 2">
+            <img src="projekt3.jpg" alt="Projekt 3">
+        </div>
+        <img src="projekt4.jpg" alt="Projekt 4 Groß" class="single-project-img">
+    </section>
 
-    <h2>Kenntnisse und Fähigkeiten</h2>
-    <ul>
-        <li>Organisation und Koordination von Arbeitsabläufen</li>
-        <li>Kommunikationsfähigkeit</li>
-        <li>Empathie und soziale Kompetenz</li>
-        <li>Verantwortungsbewusstsein</li>
-        <li>Belastbarkeit und Stressresistenz</li>
-        <li>Teamführung und Zusammenarbeit</li>
-        <li>Flexibilität und schnelle Einarbeitung in neue Aufgaben</li>
-        <li>Interkulturelle Kompetenz</li>
-        <li>Selbstständige und strukturierte Arbeitsweise</li>
-    </ul>
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <form action="mailto:dorian@example.com" method="post" enctype="text/plain">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="Name" required>
 
-    <h2>Ausbildung</h2>
-    <p><strong>Realschule West Gießen, 2001</strong> – Realschulabschluss<br>
-    <strong>Geb. Nikolaus GmbH Gießen, 2001-2004</strong> – Maler und Lackierer</p>
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="E-Mail" required>
 
-    <h2>Sprachen</h2>
-    <ul>
-        <li>Deutsch (Muttersprache)</li>
-        <li>Englisch (B2)</li>
-    </ul>
-</section>
+            <label for="message">Nachricht</label>
+            <textarea id="message" name="Nachricht" rows="5" required></textarea>
 
-<section id="projects">
-    <h2>Projekte</h2>
-    <h3>FunFacts</h3>
-    <p>In diesem Projekt wurden über eine API-Abfrage 365 FunFacts in einer Datenbank gespeichert, um sich diese mit einer App wiedergeben lassen zu können. Einzelne Fakten können als Favoriten gespeichert werden und eine kleine Statistik gibt es auch.</p>
-    <img src="images/Schreenshot_Fun_Fact_Generaator.png" alt="Fun Facts Projekt" class="single-project-img">
+            <button type="submit">Absenden</button>
+        </form>
+    </section>
 
+    <footer>
+        &copy; 2025 Dorian Ratzmer - Alle Rechte vorbehalten
+    </footer>
 
-    <h3>Wetter App</h3>
-    <p>Hier eines der früheren Projekte, bei dem es darum ging, Daten zu visualisieren. Wir haben dazu Wetterdaten aus dem Internet extrahiert, um sie via Streamlit sichtbar zu machen.</p>
-    <div class="project-gallery">
-        <img src="images/Screenshot_Wetterapp2.png" alt="Wetterapp Screenshot 1">
-        <img src="images/Screenshot_Wetterapp3.png" alt="Wetterapp Screenshot 2">
-    </div>
+    <script>
+        // Funktion zum Umschalten des Darkmodes
+        function toggleDarkMode() {
+            document.body.classList.toggle('darkmode');
 
-    <h3>IHK Dashboard</h3>
-    <p>Das Dashboard, mit dem mein Team und ich bei der IHK-Prüfung überzeugt haben, darf hier natürlich auch auf keinen Fall fehlen. Hier ging es darum, anhand von Daten eines Fitnessstudios zu errechnen, welche Kunden ihre Verträge nicht verlängern werden und für die Marketingabteilung entsprechende Kundenprofile herauszuarbeiten.</p>
-    <img src="images/IHK_Dashboard.png" alt="IHK Dashboard" class="single-project-img">
-</section>
-
-<section id="contact">
-    <h2>Kontakt</h2>
-
-    <!-- Kontaktformular -->
-    <form action="https://formsubmit.co/ratzmer.d86@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="Ihr Name" required>
-        <input type="email" name="email" placeholder="Ihre E-Mail" required>
-        <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
-        <button type="submit">Absenden</button>
-    </form>
-
-    <!-- Social Media Links als Icons -->
-    <div class="social-media">
-        <h2>Folge mir</h2>
-        <a href="https://www.linkedin.com/in/dorian-r-382692344/" target="_blank" aria-label="LinkedIn">
-            <img src="images/LinkedIn_icon.svg" alt="LinkedIn" />
-        </a>
-        <a href="https://github.com/Ameroras" target="_blank" aria-label="GitHub">
-            <img src="images/github.svg" alt="GitHub" />
-        </a>
-    </div>
-</section>
-
-
-<footer>
-    © 2025 Dorian Ratzmer
-</footer>
-
-<script>
-    const toggleButton = document.getElementById('darkmode-toggle');
-    toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('darkmode');
-        if (document.body.classList.contains('darkmode')) {
-            toggleButton.textContent = '☀️ Lightmode';
-        } else {
-            toggleButton.textContent = '🌙 Darkmode';
+            // Button-Text wechseln
+            const btn = document.querySelector('.darkmode-button');
+            if(document.body.classList.contains('darkmode')) {
+                btn.textContent = '☀️ Lightmode';
+            } else {
+                btn.textContent = '🌙 Darkmode';
+            }
         }
-    });
-</script>
-
-
+    </script>
 </body>
 </html>
