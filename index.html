@@ -1,174 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lebenslauf Dorian Ratzmer</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-        color: #333;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-    }
-    header, nav, section, footer {
-        padding: 20px;
-        max-width: 1000px;
-        margin: auto;
-    }
-    nav {
-        background: #444;
-        color: #fff;
-        text-align: center;
-        padding: 12px 0;
-        margin-bottom: 20px;
-        border-bottom: 3px solid #f0ad4e;
-    }
-    nav a {
-        color: #fff;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s;
-    }
-    nav a:hover {
-        color: #f0ad4e;
-    }
-    h1, h2, h3 {
-        text-align: center;
-    }
-    img.profile-pic {
-        width: 200px;
-        border-radius: 50%;
-        margin: 15px auto;
-        display: block;
-        border: 3px solid #f0ad4e;
-    }
-    .skills {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 10px;
-    }
-    .skill {
-        background: #f0ad4e;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 20px;
-        font-weight: bold;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        transition: transform 0.2s;
-    }
-    .skill:hover {
-        transform: scale(1.05);
-    }
-    .project-gallery {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-        margin: 15px 0;
-    }
-    .project-gallery img {
-        width: 450px;
-        max-width: 50%;
-        border: 2px solid #ddd;
-        border-radius: 8px;
-        transition: transform 0.3s, border-color 0.3s;
-    }
-    .project-gallery img:hover {
-        transform: scale(1.05);
-        border-color: #f0ad4e;
-    }
-    .single-project-img {
-        max-width: 800px;
-        width: 100%;
-        display: block;
-        margin: 15px auto;
-        border: 2px solid #ddd;
-        border-radius: 8px;
-    }
-    footer {
-        text-align: center;
-        font-size: 0.9em;
-        color: #555;
-        margin-top: 30px;
-        padding: 15px 0;
-        border-top: 1px solid #ccc;
-    }
-    section {
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        margin-bottom: 20px;
-    }
-
-    /* Dark Mode Styles */
-    body.dark-mode {
-        background-color: #121212;
-        color: #eee;
-    }
-
-    body.dark-mode nav {
-        background: #222;
-        border-bottom-color: #f0ad4e;
-    }
-
-    body.dark-mode nav a {
-        color: #fff;
-    }
-
-    body.dark-mode nav a:hover {
-        color: #f0ad4e;
-    }
-
-    body.dark-mode section {
-        background: #1e1e1e;
-        box-shadow: 0 2px 8px rgba(255,255,255,0.05);
-    }
-
-    body.dark-mode footer {
-        color: #aaa;
-        border-top-color: #555;
-    }
-
-    body.dark-mode .skill {
-        background: #555;
-        color: #f0ad4e;
-    }
-
-    body.dark-mode .project-gallery img {
-        border-color: #444;
-    }
-
-    body.dark-mode .project-gallery img:hover {
-        border-color: #f0ad4e;
-    }
-
-    /* Dark Mode Toggle Button */
-    #darkModeToggle {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        padding: 10px 15px;
-        background-color: #444;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-</style>
-
 </head>
 <body>
-
-<button id="darkModeToggle">Dark Mode an/aus</button>
 
 <header>
     <h1>Dorian Ratzmer</h1>
@@ -243,20 +81,25 @@
     </div>
 
     <h3>IHK Dashboard</h3>
-    <p>Das Dashboard, mit dem mein Team und ich bei der IHK-Prüfung gearbeitet haben, zeigt Umsatz- und Verkaufszahlen auf einer interaktiven Oberfläche an.</p>
-    <img src="images/Projekt_IHK_Dashboard.png" alt="IHK Dashboard" class="single-project-img">
+    <p>Das Dashboard, mit dem mein Team und ich bei der IHK-Prüfung überzeugt haben, darf hier natürlich auch auf keinen Fall fehlen. Hier ging es darum, anhand von Daten eines Fitnessstudios zu errechnen, welche Kunden ihre Verträge nicht verlängern werden und für die Marketingabteilung entsprechende Kundenprofile herauszuarbeiten.</p>
+    <img src="images/IHK_Dashboard.png" alt="IHK Dashboard" class="single-project-img">
 </section>
 
-<footer id="contact">
-    <p>© 2025 Dorian Ratzmer | E-Mail: dorian.ratzmer@email.de</p>
-</footer>
+<section id="contact">
+    <h2>Kontakt</h2>
+    <p>📧 <a href="mailto:ratzmer.d86@gmail.com">ratzmer.d86@gmail.com</a></p>
+    <p>📞 Telefon: 0163/2441358</p>
+    <p>🏠 Adresse: 34117 Kassel, Deutschland</p>
 
-<script>
-    const toggleButton = document.getElementById('darkModeToggle');
-    toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-    });
-</script>
+    <h2>Social Media</h2>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/dorian-r-382692344/" target="_blank">LinkedIn Profil</a></p>
+    <p>GitHub: <a href="https://github.com/Ameroras" target="_blank">github.com/dorianratzmer</a></p>
+</section>
+
+
+<footer>
+    © 2025 Dorian Ratzmer
+</footer>
 
 </body>
 </html>
