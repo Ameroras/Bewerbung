@@ -67,7 +67,7 @@ img.profile-pic {
     margin-top: 250px;
     object-fit: contain;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(240, 173, 78, 0.5);
     /* Verhindert schrumpfen */
     flex-shrink: 0;
     /* Optional: falls noch Abstand besteht */
