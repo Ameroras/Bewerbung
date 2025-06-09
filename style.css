@@ -41,21 +41,24 @@ h1, h2, h3 {
     text-align: center;
 }
 
-/* Profilbild */
+
+.profile-header-container {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    justify-content: flex-start; /* Falls nicht vorhanden */
+}
+
 img.profile-pic {
     width: 200px;
     border-radius: 50%;
     margin: 0;
-    display: block;
     border: 3px solid #f0ad4e;
+    /* Ändere display von block zu inline-block */
+    display: inline-block;
+    /* Verhindert schrumpfen */
+    flex-shrink: 0;
     transition: border-color 0.3s;
-}
-
-/* IHK Badged */
-.profile-header-container {
-    display: flex;
-    align-items: center;
-    gap: 0px;
 }
 
 .ihk-badge {
@@ -64,6 +67,10 @@ img.profile-pic {
     object-fit: contain;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    /* Verhindert schrumpfen */
+    flex-shrink: 0;
+    /* Optional: falls noch Abstand besteht */
+    margin-left: -5px;
 }
 
 /* Skills */
