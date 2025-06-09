@@ -1,329 +1,346 @@
 <!DOCTYPE html>
-<!-- Dokumenttyp HTML5 -->
 <html lang="de">
-<!-- Sprache auf Deutsch gesetzt -->
 <head>
-    <meta charset="UTF-8">
-    <!-- Zeichencodierung auf UTF-8 für deutsche Umlaute -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Responsives Design für verschiedene Bildschirmgrößen -->
-    <title>Lebenslauf Dorian Ratzmer</title>
-    <style>
-        /* Grundlegende Formatierung des gesamten Body */
-        body {
-            font-family: Arial, sans-serif; /* Schriftart */
-            background-color: #f9f9f9; /* Heller Hintergrund */
-            color: #333; /* Dunkelgraue Schrift */
-            margin: 0; /* Kein Außenabstand */
-            padding: 0; /* Kein Innenabstand */
-            line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
-            transition: background-color 0.3s, color 0.3s; /* Sanfter Übergang bei Farbwechsel */
-        }
+    <meta charset="UTF-8"> <!-- Zeichensatz auf UTF-8 gesetzt für deutsche Umlaute usw. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsives Design für mobile Geräte -->
+    <title>Lebenslauf Dorian Ratzmer</title> <!-- Seitentitel, der im Browser-Tab angezeigt wird -->
 
-        /* Standardabstand und maximale Breite für wichtige Bereiche */
-        header, nav, section, footer {
-            padding: 20px;
-            max-width: 1000px; /* Maximalbreite für bessere Lesbarkeit */
-            margin: auto; /* Zentriert auf der Seite */
-            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Sanfte Übergänge */
-        }
+<style>
+    /* Allgemeine Styles für die ganze Seite */
+    body {
+        font-family: Arial, sans-serif; /* Schriftart */
+        background-color: #f9f9f9; /* Heller Hintergrund */
+        color: #333; /* Dunkle Schriftfarbe */
+        margin: 0; /* Kein äußerer Rand */
+        padding: 0; /* Kein Innenabstand */
+        line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+        transition: background-color 0.3s, color 0.3s; /* Sanfter Übergang bei Farbänderungen (für Darkmode) */
+    }
 
-        /* Navigation Bar */
-        nav {
-            background: #444; /* Dunkelgrauer Hintergrund */
-            color: #fff; /* Weiße Schrift */
-            text-align: center; /* Zentrierter Text */
-            padding: 12px 0; /* Vertikaler Innenabstand */
-            margin-bottom: 20px; /* Abstand nach unten */
-            border-bottom: 3px solid #f0ad4e; /* Orangefarbener Rahmen unten */
-        }
+    /* Grundlegendes Layout für wichtige HTML-Elemente */
+    header, nav, section, footer {
+        padding: 20px; /* Innenabstand */
+        max-width: 1000px; /* Maximale Breite */
+        margin: auto; /* Zentriert horizontal */
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Übergangseffekte */
+    }
 
-        /* Links in der Navigation */
-        nav a {
-            color: #fff; /* Weiße Schrift */
-            margin: 0 15px; /* Abstand links und rechts */
-            text-decoration: none; /* Kein Unterstrich */
-            font-weight: bold; /* Fettgedruckt */
-            transition: color 0.3s; /* Farbwechsel sanft */
-        }
+    /* Navigationsleiste */
+    nav {
+        background: #444; /* Dunkelgrauer Hintergrund */
+        color: #fff; /* Weiße Schrift */
+        text-align: center; /* Zentrierter Text */
+        padding: 12px 0; /* Vertikaler Innenabstand */
+        margin-bottom: 20px; /* Abstand nach unten */
+        border-bottom: 3px solid #f0ad4e; /* Oranger Rand unten */
+    }
 
-        /* Hover-Effekt für Links in der Navigation */
-        nav a:hover {
-            color: #f0ad4e; /* Orangefarbe beim Überfahren */
-        }
+    /* Links in der Navigation */
+    nav a {
+        color: #fff; /* Weißer Text */
+        margin: 0 15px; /* Abstand links und rechts */
+        text-decoration: none; /* Kein Unterstrich */
+        font-weight: bold; /* Fettschrift */
+        transition: color 0.3s; /* Farbwechsel-Übergang */
+    }
 
-        /* Überschriften Zentrieren */
-        h1, h2, h3 {
-            text-align: center;
-        }
+    /* Hover-Effekt für Navigationslinks */
+    nav a:hover {
+        color: #f0ad4e; /* Orange bei Mouseover */
+    }
 
-        /* Profilbild Formatierung */
-        img.profile-pic {
-            width: 200px; /* Breite des Bildes */
-            border-radius: 50%; /* Rundes Bild (Kreis) */
-            margin: 15px auto; /* Oben und unten Abstand, zentriert */
-            display: block; /* Blockelement für Zentrierung */
-            border: 3px solid #f0ad4e; /* Oranger Rahmen */
-            transition: border-color 0.3s; /* Sanfter Übergang bei Rahmenfarbe */
-        }
+    /* Überschriften zentrieren */
+    h1, h2, h3 {
+        text-align: center;
+    }
 
-        /* Container für Skills als flexibles Layout */
-        .skills {
-            display: flex; /* Flexbox für flexible Anordnung */
-            flex-wrap: wrap; /* Zeilenumbruch bei Platzmangel */
-            justify-content: center; /* Zentriert alle Skills */
-            gap: 10px; /* Abstand zwischen den Skills */
-            margin-top: 10px; /* Abstand nach oben */
-        }
+    /* Profilbild */
+    img.profile-pic {
+        width: 200px; /* Breite */
+        border-radius: 50%; /* Rundes Bild */
+        margin: 15px auto; /* Abstand oben/unten und zentriert */
+        display: block; /* Block-Element für Zentrierung */
+        border: 3px solid #f0ad4e; /* Oranger Rahmen */
+        transition: border-color 0.3s; /* Sanfter Übergang bei Farbänderung */
+    }
 
-        /* Einzelne Skill-Boxen */
-        .skill {
-            background: #f0ad4e; /* Oranger Hintergrund */
-            color: white; /* Weiße Schrift */
-            padding: 10px 20px; /* Innenabstand */
-            border-radius: 20px; /* Abgerundete Ecken */
-            font-weight: bold; /* Fett */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* leichter Schatten */
-            transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
-            /* Sanfte Animationen bei Hover */
-        }
+    /* Container für Skills */
+    .skills {
+        display: flex; /* Flexbox-Layout */
+        flex-wrap: wrap; /* Zeilenumbruch */
+        justify-content: center; /* Zentriert die Elemente */
+        gap: 10px; /* Abstand zwischen den Skills */
+        margin-top: 10px;
+    }
 
-        /* Hover-Effekt auf Skills: leichtes Vergrößern */
-        .skill:hover {
-            transform: scale(1.05);
-        }
+    /* Einzelne Skill-Box */
+    .skill {
+        background: #f0ad4e; /* Orange Hintergrund */
+        color: white; /* Weiße Schrift */
+        padding: 10px 20px; /* Innenabstand */
+        border-radius: 20px; /* Runde Ecken */
+        font-weight: bold; /* Fettschrift */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Schatten für Tiefe */
+        transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s, color 0.3s; /* Übergänge für Animationen */
+    }
 
-        /* Galerie für Projektbilder */
-        .project-gallery {
-            display: flex; /* Flexbox */
-            justify-content: center; /* Zentriert */
-            gap: 15px; /* Abstand zwischen Bildern */
-            flex-wrap: wrap; /* Umbruch wenn nötig */
-            margin: 15px 0; /* Abstand oben und unten */
-        }
+    /* Hover-Effekt für Skill-Box */
+    .skill:hover {
+        transform: scale(1.05); /* Vergrößert leicht */
+    }
 
-        /* Bilder in der Galerie */
-        .project-gallery img {
-            width: 450px; /* Fixe Breite */
-            max-width: 50%; /* Maximal die Hälfte der Elternbreite */
-            border: 2px solid #ddd; /* Hellgrauer Rahmen */
-            border-radius: 8px; /* Abgerundete Ecken */
-            transition: transform 0.3s, border-color 0.3s; /* Sanfte Übergänge */
-        }
+    /* Galerie für Projektbilder */
+    .project-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap; /* Umbruch bei zu vielen Bildern */
+        margin: 15px 0;
+    }
 
-        /* Hover-Effekt auf Galerie-Bilder: Vergrößern + Rahmenfarbe ändern */
-        .project-gallery img:hover {
-            transform: scale(1.5);
-            border-color: #f0ad4e; /* Orange */
-        }
+    /* Bilder in der Galerie */
+    .project-gallery img {
+        width: 450px; /* Feste Breite */
+        max-width: 50%; /* Maximal 50% des Containers */
+        border: 2px solid #ddd; /* Hellgrauer Rahmen */
+        border-radius: 8px; /* Runde Ecken */
+        transition: transform 0.3s, border-color 0.3s; /* Übergänge für Hover */
+    }
 
-        /* Einzelnes großes Projektbild */
-        .single-project-img {
-            max-width: 800px;
-            width: 100%;
-            display: block; /* Block für Zentrierung */
-            margin: 15px auto; /* Abstand + Zentrierung */
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            transition: border-color 0.3s;
-        }
+    /* Hover-Effekt für Bilder in Galerie */
+    .project-gallery img:hover {
+        transform: scale(1.5); /* Vergrößert Bild stark */
+        border-color: #f0ad4e; /* Oranger Rahmen */
+    }
 
-        /* Footer Gestaltung */
-        footer {
-            text-align: center;
-            font-size: 0.9em; /* Etwas kleinere Schrift */
-            color: #555; /* Mittelgrau */
-            margin-top: 30px;
-            padding: 15px 0;
-            border-top: 1px solid #ccc; /* Oberer Rahmen */
-            transition: color 0.3s, border-color 0.3s;
-        }
+    /* Einzelnes großes Projektbild */
+    .single-project-img {
+        max-width: 800px; /* Maximale Breite */
+        width: 100%; /* Breite passt sich Container an */
+        display: block;
+        margin: 15px auto; /* Abstand und zentriert */
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        transition: border-color 0.3s;
+    }
 
-        /* Abschnitt Styling */
-        section {
-            background: white; /* Weißer Hintergrund */
-            padding: 20px;
-            border-radius: 8px; /* Abgerundete Ecken */
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* leichter Schatten */
-            margin-bottom: 20px;
-            transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-        }
+    /* Footer-Design */
+    footer {
+        text-align: center;
+        font-size: 0.9em;
+        color: #555; /* Mittelgraue Schrift */
+        margin-top: 30px;
+        padding: 15px 0;
+        border-top: 1px solid #ccc; /* Leichter Rand oben */
+        transition: color 0.3s, border-color 0.3s;
+    }
 
-        /* Darkmode Styles */
-        body.darkmode {
-            background-color: #121212; /* Dunkler Hintergrund */
-            color: #eee; /* Helle Schrift */
-        }
-        body.darkmode header,
-        body.darkmode nav,
-        body.darkmode section,
-        body.darkmode footer {
-            background-color: #1e1e1e; /* Dunkle Container */
-            color: #eee; /* Helle Schrift */
-            box-shadow: none; /* Kein Schatten */
-        }
-        body.darkmode nav {
-            background-color: #333; /* Etwas helleres Dunkelgrau */
-            border-bottom-color: #f0ad4e; /* Orange */
-        }
-        body.darkmode nav a {
-            color: #ddd; /* Hellgrau */
-        }
-        body.darkmode nav a:hover {
-            color: #f0ad4e; /* Orange beim Hover */
-        }
-        body.darkmode img.profile-pic {
-            border-color: #f0ad4e; /* Oranger Rahmen */
-        }
-        body.darkmode .skill {
-            background-color: #f0ad4e; /* Orange */
-            color: #222; /* Dunkle Schrift auf Orange */
-            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* leichter heller Schatten */
-        }
-        body.darkmode .project-gallery img,
-        body.darkmode .single-project-img {
-            border-color: #444; /* Dunkler Rahmen */
-        }
-        body.darkmode footer {
-            color: #aaa; /* Hellgrau */
-            border-top-color: #444; /* Dunkler Rahmen */
-        }
+    /* Section-Container (z.B. "About", "Skills") */
+    section {
+        background: white; /* Weißer Hintergrund */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Leichter Schatten */
+        margin-bottom: 20px;
+        transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    }
 
-        /* Button für Darkmode Umschaltung */
-        .darkmode-button {
-            position: fixed; /* Immer sichtbar */
-            top: 20px;
-            right: 20px;
-            padding: 8px 12px;
-            background-color: #444; /* Dunkelgrau */
-            color: #fff; /* Weiß */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer; /* Maus zeigt Hand */
-            z-index: 1000; /* Immer oben */
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .darkmode-button:hover {
-            background-color: #f0ad4e;
-            color: #222;
-        }
+    /* -------- Darkmode Styles -------- */
 
-        /* Styling des Kontaktformulars */
-        form {
-            display: flex; /* Flexbox */
-            flex-direction: column; /* Vertikal anordnen */
-            gap: 15px; /* Abstand zwischen Eingabefeldern */
-            max-width: 500px; /* Maximale Breite */
-            margin: 0 auto; /* Zentrieren */
-        }
+    /* Hintergrund und Schriftfarbe bei Darkmode */
+    body.darkmode {
+        background-color: #121212; /* Sehr dunkler Hintergrund */
+        color: #eee; /* Helle Schrift */
+    }
 
-        label {
-            font-weight: bold;
-        }
+    /* Darkmode für alle Hauptbereiche */
+    body.darkmode header,
+    body.darkmode nav,
+    body.darkmode section,
+    body.darkmode footer {
+        background-color: #1e1e1e; /* Dunkelgrau */
+        color: #eee; /* Helle Schrift */
+        box-shadow: none; /* Kein Schatten */
+    }
 
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-            transition: border-color 0.3s;
-        }
+    /* Darkmode Navigation */
+    body.darkmode nav {
+        background-color: #333; /* Dunkler als normal */
+        border-bottom-color: #f0ad4e; /* Oranger Rand */
+    }
 
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        textarea:focus {
-            border-color: #f0ad4e; /* Orange beim Fokus */
-            outline: none; /* Kein Umriss */
-        }
+    /* Darkmode Links in der Navigation */
+    body.darkmode nav a {
+        color: #ddd; /* Hellgrau */
+    }
 
-        button[type="submit"] {
-            background-color: #f0ad4e;
-            color: #fff;
-            border: none;
-            padding: 12px;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        button[type="submit"]:hover {
-            background-color: #d99728; /* Etwas dunkleres Orange */
-        }
+    /* Hover-Effekt Darkmode Navigation Links */
+    body.darkmode nav a:hover {
+        color: #f0ad4e; /* Orange */
+    }
 
-    </style>
+    /* Darkmode Profilbild-Rahmen */
+    body.darkmode img.profile-pic {
+        border-color: #f0ad4e;
+    }
+
+    /* Darkmode Skill-Box */
+    body.darkmode .skill {
+        background-color: #f0ad4e; /* Orange */
+        color: #222; /* Dunkle Schrift */
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); /* Heller Schatten */
+    }
+
+    /* Darkmode Projektbilder Rahmen */
+    body.darkmode .project-gallery img,
+    body.darkmode .single-project-img {
+        border-color: #444; /* Dunkler Rahmen */
+    }
+
+    /* Darkmode Footer */
+    body.darkmode footer {
+        color: #aaa; /* Helleres Grau */
+        border-top-color: #444; /* Dunkler Rand */
+    }
+
+    /* Button für Darkmode Umschaltung */
+    .darkmode-button {
+        position: fixed; /* Fixiert an einer Position */
+        top: 20px; /* Abstand vom oberen Rand */
+        right: 20px; /* Abstand vom rechten Rand */
+        padding: 8px 12px;
+        background-color: #444;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000; /* Über anderen Elementen */
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Hover-Effekt für Darkmode Button */
+    .darkmode-button:hover {
+        background-color: #f0ad4e;
+        color: #222;
+    }
+
+    /* -------- Kontaktformular Styling -------- */
+
+    /* Formular-Layout */
+    form {
+        display: flex;
+        flex-direction: column; /* Elemente untereinander */
+        gap: 15px; /* Abstand zwischen Elementen */
+        max-width: 500px;
+        margin: 0 auto; /* Zentriert */
+    }
+
+    /* Formularfelder */
+    input[type="text"], input[type="email"], textarea {
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+    }
+
+    /* Fokus-Effekt für Eingabefelder */
+    input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+        border-color: #f0ad4e;
+        outline: none;
+    }
+
+    /* Submit Button */
+    input[type="submit"] {
+        background-color: #f0ad4e;
+        border: none;
+        padding: 12px;
+        font-size: 1em;
+        font-weight: bold;
+        color: #222;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    /* Hover-Effekt Submit */
+    input[type="submit"]:hover {
+        background-color: #e49e1f;
+    }
+
+</style>
 </head>
 <body>
-    <button class="darkmode-button" onclick="toggleDarkMode()">🌙 Darkmode</button>
 
-    <header>
-        <h1>Dorian Ratzmer</h1>
-        <h2>Data Engineer & Data Analyst</h2>
-        <img src="profilbild.jpg" alt="Dorian Ratzmer Profilbild" class="profile-pic">
-    </header>
+<!-- Button zum Umschalten des Darkmodes -->
+<button class="darkmode-button" id="toggleDarkmode">Darkmode an/aus</button>
 
-    <nav>
-        <a href="#skills">Skills</a>
-        <a href="#projekte">Projekte</a>
-        <a href="#kontakt">Kontakt</a>
-    </nav>
+<!-- Navigation -->
+<nav>
+    <a href="#about">Über mich</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projekte</a>
+    <a href="#contact">Kontakt</a>
+</nav>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills">
-            <div class="skill">Python</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Power BI</div>
-            <div class="skill">Datenanalyse</div>
-            <div class="skill">ETL-Prozesse</div>
-            <div class="skill">Data Engineering</div>
-        </div>
-    </section>
+<!-- Über mich -->
+<section id="about">
+    <h1>Dorian Ratzmer</h1>
+    <img src="images/profile.jpg" alt="Profilbild Dorian Ratzmer" class="profile-pic">
+    <p>Hallo! Ich bin Dorian Ratzmer, ein leidenschaftlicher Entwickler mit Fokus auf Frontend-Technologien und UX-Design. Ich liebe es, kreative Lösungen zu finden und Webseiten ansprechend und nutzerfreundlich zu gestalten.</p>
+</section>
 
-    <section id="projekte">
-        <h2>Projekte</h2>
-        <div class="project-gallery">
-            <img src="projekt1.jpg" alt="Projekt 1">
-            <img src="projekt2.jpg" alt="Projekt 2">
-            <img src="projekt3.jpg" alt="Projekt 3">
-        </div>
-        <img src="projekt4.jpg" alt="Projekt 4 Groß" class="single-project-img">
-    </section>
+<!-- Skills -->
+<section id="skills">
+    <h2>Meine Skills</h2>
+    <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Python</div>
+        <div class="skill">Datenanalyse</div>
+    </div>
+</section>
 
-    <section id="kontakt">
-        <h2>Kontakt</h2>
-        <form action="mailto:dorian@example.com" method="post" enctype="text/plain">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="Name" required>
+<!-- Projekte -->
+<section id="projects">
+    <h2>Projekte</h2>
+    <div class="project-gallery">
+        <img src="images/projekt1.jpg" alt="Screenshot Projekt 1">
+        <img src="images/projekt2.jpg" alt="Screenshot Projekt 2">
+    </div>
+    <img src="images/projekt3_gross.jpg" alt="Screenshot Großes Projekt" class="single-project-img">
+</section>
 
-            <label for="email">E-Mail</label>
-            <input type="email" id="email" name="E-Mail" required>
+<!-- Kontaktformular -->
+<section id="contact">
+    <h2>Kontakt</h2>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Dein Name" required>
 
-            <label for="message">Nachricht</label>
-            <textarea id="message" name="Nachricht" rows="5" required></textarea>
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" placeholder="Deine E-Mail" required>
 
-            <button type="submit">Absenden</button>
-        </form>
-    </section>
+        <label for="message">Nachricht:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Deine Nachricht" required></textarea>
 
-    <footer>
-        &copy; 2025 Dorian Ratzmer - Alle Rechte vorbehalten
-    </footer>
+        <input type="submit" value="Absenden">
+    </form>
+</section>
 
-    <script>
-        // Funktion zum Umschalten des Darkmodes
-        function toggleDarkMode() {
-            document.body.classList.toggle('darkmode');
+<footer>
+    &copy; 2025 Dorian Ratzmer - Alle Rechte vorbehalten.
+</footer>
 
-            // Button-Text wechseln
-            const btn = document.querySelector('.darkmode-button');
-            if(document.body.classList.contains('darkmode')) {
-                btn.textContent = '☀️ Lightmode';
-            } else {
-                btn.textContent = '🌙 Darkmode';
-            }
-        }
-    </script>
+<script>
+    // Funktion zum Umschalten des Darkmodes
+    const toggleButton = document.getElementById('toggleDarkmode');
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('darkmode');
+    });
+</script>
+
 </body>
 </html>
