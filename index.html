@@ -258,16 +258,12 @@
 
 <section id="contact">
     <h2>Kontakt</h2>
-    <p>📧 Kontakt: <span id="email"></span></p>
-
-<script>
-    const user = 'ratzmer.d86';
-    const domain = 'gmail.com';
-    const emailLink = document.createElement('a');
-    emailLink.href = `mailto:${user}@${domain}`;
-    emailLink.textContent = `${user}@${domain}`;
-    document.getElementById('email').appendChild(emailLink);
-</script>
+    <form action="https://formsubmit.co/deine.email@beispiel.de" method="POST">
+        <input type="text" name="name" placeholder="Dein Name" required>
+        <input type="email" name="email" placeholder="Deine E-Mail" required>
+        <textarea name="message" placeholder="Deine Nachricht" required></textarea>
+        <button type="submit">Absenden</button>
+    </form>
 
     <p>📞 Telefon: auf Anfrage per Mail erhältich</p>
     <p>🏠 Adresse: 34117 Kassel, Deutschland</p>
