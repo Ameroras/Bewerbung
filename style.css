@@ -60,7 +60,7 @@ img.profile-pic {
 .ihk-badge {
     position: absolute;
     left: 50%; /* Start bei Mitte */
-    transform: translateX(120%);
+    transform: translateX(120%) translateY(-250px);
     /* X: links neben Profilbild, Y: leicht nach unten */
     width: 120px;
     height: auto;
