@@ -243,6 +243,7 @@ body.darkmode footer {
 #contact form textarea {
     resize: none;
     height: 200px;
+}
 
 #contact form input::placeholder,
 #contact form textarea::placeholder {
