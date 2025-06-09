@@ -46,7 +46,7 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     gap: 0;
-    justify-content: center; /* Falls nicht vorhanden */
+    justify-content: center;
 }
 
 img.profile-pic {
@@ -54,10 +54,7 @@ img.profile-pic {
     border-radius: 50%;
     margin: 0;
     border: 3px solid #f0ad4e;
-    /* Ändere display von block zu inline-block */
     display: inline-block;
-    /* Verhindert schrumpfen */
-    flex-shrink: 0;
     transition: border-color 0.3s;
 }
 
