@@ -225,7 +225,7 @@ body.darkmode footer {
 #contact form button {
     width: 100%;
     padding: 12px;
-    background-color: #4CAF50;
+    background-color: #f0ad4e;
     color: white;
     border: none;
     border-radius: 5px;
@@ -235,7 +235,7 @@ body.darkmode footer {
 }
 
 #contact form button:hover {
-    background-color: #45a049;
+    background-color: #f0ad4e;
 }
 
 /* Social Media Icons */
