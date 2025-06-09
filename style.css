@@ -197,7 +197,6 @@ body.darkmode footer {
 }
 
 /* Kontaktformular */
-/* Kontaktformular */
 #contact form {
     display: flex;
     flex-direction: column;
@@ -219,11 +218,11 @@ body.darkmode footer {
     border-radius: 5px;
     background-color: #444;
     color: #fff;
-    box-sizing: border-box; /* wichtig für saubere Darstellung */
+    box-sizing: border-box;
 }
 
 #contact form textarea {
-    resize: none; /* verhindert das Vergrößern/Verkleinern */
+    resize: none;
 }
 
 #contact form input::placeholder,
@@ -283,3 +282,18 @@ body.darkmode footer {
         display: block;
     }
 }
+
+.profile-header-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ihk-badge {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
