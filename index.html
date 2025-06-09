@@ -5,100 +5,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lebenslauf Dorian Ratzmer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header, nav, section, footer {
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        nav {
-            background: #444;
-            color: #fff;
-            text-align: center;
-            padding: 12px 0;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #f0ad4e;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #f0ad4e;
-        }
-        h1, h2, h3 {
-            text-align: center;
-        }
-        img.profile-pic {
-            width: 200px;
-            border-radius: 50%;
-            margin: 15px auto;
-            display: block;
-            border: 3px solid #f0ad4e;
-        }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .skill {
-            background: #f0ad4e;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-        .skill:hover {
-            transform: scale(1.05);
-        }
-        .project-gallery {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin: 15px 0;
-        }
-        .project-gallery img {
-            width: 300px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-        .project-gallery img:hover {
-            transform: scale(1.05);
-            border-color: #f0ad4e;
-        }
-        footer {
-            text-align: center;
-            font-size: 0.9em;
-            color: #555;
-            margin-top: 30px;
-            padding: 15px 0;
-            border-top: 1px solid #ccc;
-        }
-        section {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-        }
-    </style>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+    header, nav, section, footer {
+        padding: 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+    nav {
+        background: #444;
+        color: #fff;
+        text-align: center;
+        padding: 12px 0;
+        margin-bottom: 20px;
+        border-bottom: 3px solid #f0ad4e;
+    }
+    nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #f0ad4e;
+    }
+    h1, h2, h3 {
+        text-align: center;
+    }
+    img.profile-pic {
+        width: 200px;
+        border-radius: 50%;
+        margin: 15px auto;
+        display: block;
+        border: 3px solid #f0ad4e;
+    }
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .skill {
+        background: #f0ad4e;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: transform 0.2s;
+    }
+    .skill:hover {
+        transform: scale(1.05);
+    }
+    .project-gallery {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin: 15px 0;
+    }
+    .project-gallery img {
+        width: 400px;
+        max-width: 45%;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        transition: transform 0.3s, border-color 0.3s;
+    }
+    .project-gallery img:hover {
+        transform: scale(1.05);
+        border-color: #f0ad4e;
+    }
+    .single-project-img {
+        max-width: 800px;
+        width: 100%;
+        display: block;
+        margin: 15px auto;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+    footer {
+        text-align: center;
+        font-size: 0.9em;
+        color: #555;
+        margin-top: 30px;
+        padding: 15px 0;
+        border-top: 1px solid #ccc;
+    }
+    section {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        margin-bottom: 20px;
+    }
+</style>
+
 </head>
 <body>
 
@@ -176,7 +186,7 @@
 
     <h3>IHK Dashboard</h3>
     <p>Das Dashboard, mit dem mein Team und ich bei der IHK-Prüfung überzeugt haben, darf hier natürlich auch auf keinen Fall fehlen. Hier ging es darum, anhand von Daten eines Fitnessstudios zu errechnen, welche Kunden ihre Verträge nicht verlängern werden und für die Marketingabteilung entsprechende Kundenprofile herauszuarbeiten.</p>
-    <img src="images/IHK_Dashboard.png" alt="IHK Dashboard">
+    <img src="images/IHK_Dashboard.png" alt="IHK Dashboard" class="single-project-img">
 </section>
 
 <section id="contact">
