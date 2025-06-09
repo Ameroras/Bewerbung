@@ -68,10 +68,6 @@ img.profile-pic {
     object-fit: contain;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(240, 173, 78, 0.5);
-    /* Verhindert schrumpfen */
-    flex-shrink: 0;
-    /* Optional: falls noch Abstand besteht */
-    margin-left: 5px;
 }
 
 /* Skills */
