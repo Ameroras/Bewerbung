@@ -64,7 +64,7 @@ img.profile-pic {
 .ihk-badge {
     width: 120px;
     height: auto;
-    margin-top: 100px;
+    margin-top: 250px;
     object-fit: contain;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
