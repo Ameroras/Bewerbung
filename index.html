@@ -6,16 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lebenslauf Dorian Ratzmer</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        header, nav, section, footer { padding: 20px; max-width: 900px; margin: auto; }
-        nav { background: #333; color: #fff; text-align: center; padding: 10px 0; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        h1, h2, h3 { text-align: center; }
-        img { display: block; margin: 10px auto; max-width: 100%; height: auto; }
-        .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-        .skill { background: #f4f4f4; padding: 10px 20px; border-radius: 5px; font-weight: bold; }
-        footer { text-align: center; font-size: 0.9em; color: #555; margin-top: 20px; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header, nav, section, footer {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        nav {
+            background: #444;
+            color: #fff;
+            text-align: center;
+            padding: 12px 0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #f0ad4e;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #f0ad4e;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        img.profile-pic {
+            width: 200px;
+            border-radius: 50%;
+            margin: 15px auto;
+            display: block;
+            border: 3px solid #f0ad4e;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .skill {
+            background: #f0ad4e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .skill:hover {
+            transform: scale(1.05);
+        }
+        .project-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+        .project-gallery img {
+            width: 300px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .project-gallery img:hover {
+            transform: scale(1.05);
+            border-color: #f0ad4e;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 30px;
+            padding: 15px 0;
+            border-top: 1px solid #ccc;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -23,7 +105,7 @@
 <header>
     <h1>Dorian Ratzmer</h1>
     <h3>IHK-zertifizierter Datenanalyst - Power BI, Python, SQL</h3>
-    <img src="images/Dorian_Nordsee.jpg" alt="Dorian Ratzmer">
+    <img src="images/Dorian_Nordsee.jpg" alt="Dorian Ratzmer" class="profile-pic">
 </header>
 
 <nav>
@@ -54,27 +136,6 @@
         <div class="skill">Projektmanagementtools</div>
         <div class="skill">Teamfähigkeit</div>
     </div>
-
-    <h2>Berufliche Erfahrung & Kenntnisse</h2>
-
-    <h3>Persönlicher Assistent von Menschen mit Behinderung</h3>
-    <p><em>FAB eV Kassel, 2010-2023</em><br>
-    In dieser Tätigkeit habe ich umfassende Erfahrung im eigenverantwortlichen Arbeiten und im Umgang mit sensiblen Situationen gesammelt.
-    Besonders wichtig waren dabei Kommunikationsstärke, Empathie und die Fähigkeit, individuelle Bedürfnisse zuverlässig zu unterstützen.
-    Außerdem habe ich ein Team von Assistent:innen koordiniert und organisatorische Abläufe effizient gestaltet.</p>
-
-    <h3>Helfer in der Pflege</h3>
-    <p><em>GDA Wohnstift Göttingen, 2007-2010</em><br>
-    Die Arbeit in der Pflege hat mir einen tiefen Einblick in strukturierte Arbeitsprozesse und interdisziplinäre Zusammenarbeit vermittelt.
-    Hier habe ich insbesondere meine Belastbarkeit, Ausdauer und Sorgfalt im täglichen Umgang mit Menschen und medizinischen Anforderungen gestärkt.
-    Zudem konnte ich wertvolle Erfahrungen im Bereich Dokumentation und Qualitätsmanagement sammeln.</p>
-
-    <h3>Diverse (Neben)Jobs</h3>
-    <p><em>In 13/16 Bundesländern Deutschlands, 2004-2010</em><br>
-    In dieser Zeit habe ich mir durch vielfältige Tätigkeiten – u.a. im Handwerk, in sozialen Projekten, in der Gastronomie und im kreativen Bereich –
-    eine ausgeprägte Anpassungsfähigkeit und hohe Lernbereitschaft angeeignet. Die ständige Einarbeitung in neue Aufgaben und Teams hat meine Flexibilität,
-    mein Improvisationstalent und meine Neugier auf neue Themen entscheidend gefördert. Gleichzeitig habe ich gelernt,
-    mich in sehr unterschiedlichen sozialen und kulturellen Umfeldern sicher zu bewegen.</p>
 
     <h2>Kenntnisse und Fähigkeiten</h2>
     <ul>
@@ -108,8 +169,10 @@
 
     <h3>Wetter App</h3>
     <p>Hier eines der früheren Projekte, bei dem es darum ging, Daten zu visualisieren. Wir haben dazu Wetterdaten aus dem Internet extrahiert, um sie via Streamlit sichtbar zu machen.</p>
-    <img src="images/Screenshot_Wetterapp2.png" alt="Wetterapp Screenshot 1">
-    <img src="images/Screenshot_Wetterapp3.png" alt="Wetterapp Screenshot 2">
+    <div class="project-gallery">
+        <img src="images/Screenshot_Wetterapp2.png" alt="Wetterapp Screenshot 1">
+        <img src="images/Screenshot_Wetterapp3.png" alt="Wetterapp Screenshot 2">
+    </div>
 
     <h3>IHK Dashboard</h3>
     <p>Das Dashboard, mit dem mein Team und ich bei der IHK-Prüfung überzeugt haben, darf hier natürlich auch auf keinen Fall fehlen. Hier ging es darum, anhand von Daten eines Fitnessstudios zu errechnen, welche Kunden ihre Verträge nicht verlängern werden und für die Marketingabteilung entsprechende Kundenprofile herauszuarbeiten.</p>
