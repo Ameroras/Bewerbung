@@ -84,7 +84,7 @@
         transition: transform 0.3s, border-color 0.3s;
     }
     .project-gallery img:hover {
-        transform: scale(1.75);
+        transform: scale(1.5);
         border-color: #f0ad4e;
     }
     .single-project-img {
@@ -171,7 +171,6 @@
     background-color: #f0ad4e;
     color: #222;
     }
-
     /* Kontaktformular Styling */
     form {
         display: flex;
@@ -180,7 +179,7 @@
         max-width: 500px;
         margin: 0 auto;
         padding: 20px;
-        background-color: #1e1e1e;
+        background-color: #1e1e1e;  /* leicht heller als Body */
         border-radius: 8px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
     }
@@ -213,15 +212,14 @@
         background-color: #e6951c;
         color: #fff;
     }
-
 /* Kontaktformular */
     #contact form {
-        background-color: #2e2e2e;
+        background-color: #2e2e2e;  /* dunkler Hintergrund */
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
         max-width: 600px;
-        margin: 0 auto 40px auto;
+        margin: 0 auto 40px auto; /* zentriert + Abstand unten */
     }
 
     #contact form input,
@@ -243,7 +241,7 @@
     #contact form button {
         width: 100%;
         padding: 12px;
-        background-color: #e6951c;
+        background-color: #4CAF50;
         color: white;
         border: none;
         border-radius: 5px;
@@ -253,7 +251,7 @@
     }
 
     #contact form button:hover {
-        background-color: #e6951c;
+        background-color: #45a049;
     }
 
     /* Social Media Icons */
@@ -278,24 +276,8 @@
     .social-media img {
         width: 40px;
         height: 40px;
-        filter: none;
-    }
-    /* GitHub Icon im Darkmode anpassen */
-    @media (prefers-color-scheme: dark) {
-        .social-media a.github-icon {
-            background-color: white;
-            padding: 5px;
-            border-radius: 5px;
-            display: inline-block; /* wichtig, damit padding wirkt */
-        }
-
-        .social-media a.github-icon img {
-            filter: none; /* kein Invert */
-            display: block; /* damit es sich gut innerhalb des Containers verhält */
-        }
-    }
+        filter: none;}
 </style>
-
 
 </head>
 <body>
