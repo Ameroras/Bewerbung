@@ -258,8 +258,18 @@
 
 <section id="contact">
     <h2>Kontakt</h2>
-    <p>📧 <a href="mailto:ratzmer.d86@gmail.com">ratzmer.d86@gmail.com</a></p>
-    <p>📞 Telefon: 0163/2441358</p>
+    <p>📧 Kontakt: <span id="email"></span></p>
+
+<script>
+    const user = 'ratzmer.d86';
+    const domain = 'gmail.com';
+    const emailLink = document.createElement('a');
+    emailLink.href = `mailto:${user}@${domain}`;
+    emailLink.textContent = `${user}@${domain}`;
+    document.getElementById('email').appendChild(emailLink);
+</script>
+
+    <p>📞 Telefon: auf Anfrage per Mail erhältich</p>
     <p>🏠 Adresse: 34117 Kassel, Deutschland</p>
 
     <h2>Social Media</h2>
