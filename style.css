@@ -45,7 +45,7 @@ h1, h2, h3 {
 img.profile-pic {
     width: 200px;
     border-radius: 50%;
-    margin: 15px auto;
+    margin: 5px auto;
     display: block;
     border: 3px solid #f0ad4e;
     transition: border-color 0.3s;
@@ -283,10 +283,11 @@ body.darkmode footer {
     }
 }
 
+/* IHK Badged */
 .profile-header-container {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0px;
 }
 
 .ihk-badge {
