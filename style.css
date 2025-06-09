@@ -43,25 +43,27 @@ h1, h2, h3 {
 
 
 .profile-header-container {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 img.profile-pic {
+    display: block; /* block damit margin auto klappt */
+    margin: 0 auto; /* ZENTRIERT */
     width: 200px;
     border-radius: 50%;
-    margin: 0;
     border: 3px solid #f0ad4e;
-    display: inline-block;
     transition: border-color 0.3s;
 }
 
 .ihk-badge {
+    position: absolute; /* relativ zum .profile-header-container */
+    left: 50%; /* Start bei Mitte */
+    transform: translateX(-120%) translateY(30px);
+    /* X: links neben Profilbild, Y: leicht nach unten */
     width: 120px;
     height: auto;
-    margin-top: 250px;
     object-fit: contain;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(240, 173, 78, 0.5);
