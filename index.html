@@ -153,11 +153,30 @@
         color: #aaa;
         border-top-color: #444;
     }
+    .darkmode-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+    }
+
+    .darkmode-button:hover {
+    background-color: #f0ad4e;
+    color: #222;
+    }
 </style>
 
 
 </head>
 <body>
+    <button id="darkmode-toggle" class="darkmode-button">🌙 Darkmode</button>
 
 <header>
     <h1>Dorian Ratzmer</h1>
@@ -170,8 +189,6 @@
     <a href="#skills">Fähigkeiten</a>
     <a href="#projects">Projekte</a>
     <a href="#contact">Kontakt</a>
-    <button id="darkmode-toggle" style="margin-left:20px; padding:5px 10px; cursor:pointer;">🌙 Darkmode</button>
-
 </nav>
 
 <section id="about">
