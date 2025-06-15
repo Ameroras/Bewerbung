@@ -404,35 +404,6 @@ body.darkmode footer {
     opacity: 1;
     cursor: zoom-out;
 }
-/* ========== Lightbox-Vollbild ========== */
-.lightbox-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.85);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.lightbox-overlay img {
-    max-width: 95vw;
-    max-height: 90vh;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(240, 173, 78, 0.7);
-}
-
-.lightbox-overlay.visible {
-    visibility: visible;
-    opacity: 1;
-    cursor: zoom-out;
-}
 
 /* Optionaler Close-Button */
 .lightbox-close-btn {
