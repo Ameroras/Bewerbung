@@ -58,10 +58,10 @@ img.profile-pic {
 nav {
     position: absolute;
     left: 50%;
-    transform: translateX(-220%) translateY(220px);
+    transform: translateX(-240%) translateY(150px);
     background: #f0ad4e;
     color: #fff;
-    padding: 12px 20px;
+    padding: 120px 20px;
     border-radius: 8px;
     border-bottom: 3px solid #f0ad4e;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
