@@ -1,7 +1,7 @@
 /* Basis-Elemente */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #fef3e1;
     color: #333;
     margin: 0;
     padding: 0;
@@ -16,36 +16,22 @@ header, nav, section, footer {
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
-nav {
-    background: #444;
-    color: #fff;
-    text-align: center;
-    padding: 12px 0;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #f0ad4e;
-}
-
-nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #f0ad4e;
-}
-
-h1, h2, h3 {
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
-
 
 .profile-header-container {
     position: relative;
     width: 100%;
     height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 img.profile-pic {
@@ -59,14 +45,42 @@ img.profile-pic {
 
 .ihk-badge {
     position: absolute;
-    left: 50%; /* Start bei Mitte */
-    transform: translateX(95%) translateY(-120px);
-    /* X: links neben Profilbild, Y: leicht nach unten */
+    left: 50%;
+    transform: translateX(95%) translateY(100px);
     width: 120px;
     height: auto;
     object-fit: contain;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(240, 173, 78, 0.5);
+}
+
+/* Navigation */
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-220%) translateY(220px);
+    background: #f0ad4e;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    border-bottom: 3px solid #f0ad4e;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #444;
+}
+
+/* Überschriften */
+h1, h2, h3 {
+    text-align: center;
 }
 
 /* Skills */
@@ -88,10 +102,6 @@ img.profile-pic {
     transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
 
-.skill:hover {
-    transform: scale(1.05);
-}
-
 /* Projektgalerie */
 .project-gallery {
     display: flex;
@@ -101,12 +111,16 @@ img.profile-pic {
     margin: 15px 0;
 }
 
-.project-gallery img {
-    width: 450px;
-    max-width: 50%;
+.project-gallery img,
+.single-project-img {
     border: 2px solid #ddd;
     border-radius: 8px;
     transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-gallery img {
+    width: 450px;
+    max-width: 50%;
 }
 
 .project-gallery img:hover {
@@ -114,15 +128,11 @@ img.profile-pic {
     border-color: #f0ad4e;
 }
 
-/* Einzelnes Projektbild */
 .single-project-img {
     max-width: 800px;
     width: 100%;
     display: block;
     margin: 15px auto;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    transition: border-color 0.3s;
 }
 
 /* Footer */
@@ -261,22 +271,25 @@ body.darkmode footer {
     transition: background-color 0.3s;
 }
 
-
 /* Social Media Icons */
 .social-media {
     text-align: center;
 }
+
 .social-media h2 {
     margin-bottom: 10px;
 }
+
 .social-media a {
     display: inline-block;
     margin: 0 10px;
     transition: transform 0.3s;
 }
+
 .social-media a:hover {
     transform: scale(1.2);
 }
+
 .social-media img {
     width: 40px;
     height: 40px;
@@ -290,6 +303,7 @@ body.darkmode footer {
         padding: 5px;
         border-radius: 5px;
         display: inline-block;
+        box-shadow: 0 0 25px rgba(240, 173, 78, 0.5);
     }
 
     .social-media a.github-icon img {
