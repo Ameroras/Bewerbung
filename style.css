@@ -119,12 +119,12 @@ h1, h2, h3 {
 }
 
 .project-gallery img {
-    width: 450px;
-    max-width: 50%;
+    width: 100%;
+    max-width: 450px;
 }
 
 .project-gallery img:hover {
-    transform: scale(1.5);
+    transform: scale(1.05);
     border-color: #f0ad4e;
 }
 
@@ -309,5 +309,54 @@ body.darkmode footer {
     .social-media a.github-icon img {
         filter: none;
         display: block;
+    }
+}
+
+/* Responsive Styles für mobile Geräte */
+@media screen and (max-width: 768px) {
+    nav {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .profile-header-container {
+        flex-direction: column;
+    }
+
+    .ihk-badge {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .project-gallery img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .project-gallery img:hover {
+        transform: scale(1.02);
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 100%;
+        text-align: center;
+    }
+
+    .darkmode-button {
+        top: 10px;
+        right: 10px;
+        padding: 6px 10px;
+    }
+
+    #contact form {
+        padding: 15px;
     }
 }
