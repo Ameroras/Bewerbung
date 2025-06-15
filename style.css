@@ -46,25 +46,24 @@ img.profile-pic {
 .ihk-badge {
     position: absolute;
     left: 50%;
-    transform: translateX(95%) translateY(100px);
+    transform: translateX(100%) translateY(100px);
     width: 120px;
     height: auto;
     object-fit: contain;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(240, 173, 78, 0.5);
+    box-shadow: 0 0 25px rgba(240, 173, 78, 0.5);
 }
 
 /* ========== Navigation ========== */
 nav {
     position: absolute;
     left: 50%;
-    transform: translateX(-240%) translateY(150px);
-    background: #f0ad4e;
+    transform: translateX(-235%) translateY(150px);
+    background: #444;
     color: #fff;
     padding: 120px 20px;
     border-radius: 8px;
-    border-bottom: 3px solid #f0ad4e;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(240, 173, 78, 0.7);
 }
 
 nav a {
@@ -76,7 +75,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #444;
+    color: #f0ad4e;
 }
 
 /* ========== Überschriften ========== */
@@ -176,6 +175,8 @@ body.darkmode footer {
 body.darkmode nav {
     background-color: #333;
     border-bottom-color: #f0ad4e;
+    box-shadow: 0 0 25px rgba(240, 173, 78, 0.5);
+
 }
 
 body.darkmode nav a {
