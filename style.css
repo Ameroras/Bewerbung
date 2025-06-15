@@ -1,4 +1,4 @@
-/* Basis-Elemente */
+/* ========== Basis-Elemente ========== */
 body {
     font-family: Arial, sans-serif;
     background-color: #fef3e1;
@@ -16,7 +16,7 @@ header, nav, section, footer {
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
-/* Header */
+/* ========== Header ========== */
 header {
     display: flex;
     flex-direction: column;
@@ -54,21 +54,22 @@ img.profile-pic {
     box-shadow: 0 0 5px rgba(240, 173, 78, 0.5);
 }
 
-/* Navigation */
+/* ========== Navigation ========== */
 nav {
     position: absolute;
     left: 50%;
     transform: translateX(-220%) translateY(220px);
     background: #f0ad4e;
     color: #fff;
-    padding: 12px;
+    padding: 12px 20px;
     border-radius: 8px;
     border-bottom: 3px solid #f0ad4e;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 nav a {
     color: #fff;
-    margin: 0 10px;
+    margin: 0 12px;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -78,12 +79,12 @@ nav a:hover {
     color: #444;
 }
 
-/* Überschriften */
+/* ========== Überschriften ========== */
 h1, h2, h3 {
     text-align: center;
 }
 
-/* Skills */
+/* ========== Skills ========== */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -102,7 +103,7 @@ h1, h2, h3 {
     transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
 }
 
-/* Projektgalerie */
+/* ========== Projektgalerie ========== */
 .project-gallery {
     display: flex;
     justify-content: center;
@@ -123,7 +124,8 @@ h1, h2, h3 {
     max-width: 450px;
 }
 
-.project-gallery img:hover {
+.project-gallery img:hover,
+.single-project-img:hover{
     transform: scale(1.05);
     border-color: #f0ad4e;
 }
@@ -135,7 +137,7 @@ h1, h2, h3 {
     margin: 15px auto;
 }
 
-/* Footer */
+/* ========== Footer ========== */
 footer {
     text-align: center;
     font-size: 0.9em;
@@ -146,7 +148,7 @@ footer {
     transition: color 0.3s, border-color 0.3s;
 }
 
-/* Sektionen */
+/* ========== Sektionen ========== */
 section {
     background: white;
     padding: 20px;
@@ -156,7 +158,7 @@ section {
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
 }
 
-/* Darkmode Styles */
+/* ========== Darkmode Styles ========== */
 body.darkmode {
     background-color: #121212;
     color: #eee;
@@ -204,7 +206,7 @@ body.darkmode footer {
     border-top-color: #444;
 }
 
-/* Darkmode Button */
+/* ========== Darkmode Button ========== */
 .darkmode-button {
     position: fixed;
     top: 20px;
@@ -224,7 +226,7 @@ body.darkmode footer {
     color: #222;
 }
 
-/* Kontaktformular */
+/* ========== Kontaktformular ========== */
 #contact form {
     display: flex;
     flex-direction: column;
@@ -247,6 +249,14 @@ body.darkmode footer {
     background-color: #444;
     color: #fff;
     box-sizing: border-box;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    outline: none;
+    background-color: #555;
+    box-shadow: 0 0 5px #f0ad4e;
 }
 
 #contact form textarea {
@@ -271,7 +281,11 @@ body.darkmode footer {
     transition: background-color 0.3s;
 }
 
-/* Social Media Icons */
+#contact form button:hover {
+    background-color: #e59c35;
+}
+
+/* ========== Social Media Icons ========== */
 .social-media {
     text-align: center;
 }
@@ -312,7 +326,7 @@ body.darkmode footer {
     }
 }
 
-/* Responsive Styles für mobile Geräte */
+/* ========== Responsive Styles für mobile Geräte ========== */
 @media screen and (max-width: 768px) {
     nav {
         position: static;
@@ -359,4 +373,130 @@ body.darkmode footer {
     #contact form {
         padding: 15px;
     }
+}
+
+/* ========== Lightbox-Vollbild ========== */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay img {
+    max-width: 95vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(240, 173, 78, 0.7);
+}
+
+.lightbox-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+    cursor: zoom-out;
+}
+/* ========== Lightbox-Vollbild ========== */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay img {
+    max-width: 95vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(240, 173, 78, 0.7);
+}
+
+.lightbox-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+    cursor: zoom-out;
+}
+
+/* Optionaler Close-Button */
+.lightbox-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2em;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10000;
+    transition: color 0.3s;
+}
+
+.lightbox-close-btn:hover {
+    color: #f0ad4e;
+}
+/* Lightbox Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #ff9999;
+}
+
+/* Optional: Animation für das Einblenden */
+.modal-content,
+.modal-close {
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
